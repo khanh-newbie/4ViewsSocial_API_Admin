@@ -5,11 +5,25 @@ namespace App\Models {
     /**
      * App\Models\Comment
      *
+     * @property int|null $parent_id
+     * @property string|null $comment
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property int|null $post_id
+     * @property int|null $user_id
+     * @property int $id
      * @property-read \App\Models\User $user
      * @property-read \App\Models\Post $post
      * @property-read \App\Models\Comment $parent
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Comment> $children
      * @property-read int|null $children_count
+     * @method static \Illuminate\Database\Eloquent\Builder<Comment>|Comment whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Comment>|Comment whereUserId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Comment>|Comment wherePostId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Comment>|Comment whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Comment>|Comment whereUpdatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Comment>|Comment whereComment($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Comment>|Comment whereParentId($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Comment>|Comment newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Comment>|Comment newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Comment>|Comment query()
@@ -313,8 +327,18 @@ namespace App\Models {
     /**
      * App\Models\Favourite
      *
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property int|null $post_id
+     * @property int|null $user_id
+     * @property int $id
      * @property-read \App\Models\User $user
      * @property-read \App\Models\Post $post
+     * @method static \Illuminate\Database\Eloquent\Builder<Favourite>|Favourite whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Favourite>|Favourite whereUserId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Favourite>|Favourite wherePostId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Favourite>|Favourite whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Favourite>|Favourite whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Favourite>|Favourite newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Favourite>|Favourite newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Favourite>|Favourite query()
@@ -618,8 +642,18 @@ namespace App\Models {
     /**
      * App\Models\Follow
      *
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property int|null $following_id
+     * @property int|null $user_id
+     * @property int $id
      * @property-read \App\Models\User $user
      * @property-read \App\Models\User $following
+     * @method static \Illuminate\Database\Eloquent\Builder<Follow>|Follow whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Follow>|Follow whereUserId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Follow>|Follow whereFollowingId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Follow>|Follow whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Follow>|Follow whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Follow>|Follow newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Follow>|Follow newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Follow>|Follow query()
@@ -923,8 +957,18 @@ namespace App\Models {
     /**
      * App\Models\LikePost
      *
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property int|null $post_id
+     * @property int|null $user_id
+     * @property int $id
      * @property-read \App\Models\User $user
      * @property-read \App\Models\Post $post
+     * @method static \Illuminate\Database\Eloquent\Builder<LikePost>|LikePost whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<LikePost>|LikePost whereUserId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<LikePost>|LikePost wherePostId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<LikePost>|LikePost whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<LikePost>|LikePost whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<LikePost>|LikePost newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<LikePost>|LikePost newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<LikePost>|LikePost query()
@@ -1228,8 +1272,18 @@ namespace App\Models {
     /**
      * App\Models\LikeStory
      *
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property int|null $story_id
+     * @property int|null $user_id
+     * @property int $id
      * @property-read \App\Models\Story $story
      * @property-read \App\Models\User $user
+     * @method static \Illuminate\Database\Eloquent\Builder<LikeStory>|LikeStory whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<LikeStory>|LikeStory whereUserId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<LikeStory>|LikeStory whereStoryId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<LikeStory>|LikeStory whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<LikeStory>|LikeStory whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<LikeStory>|LikeStory newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<LikeStory>|LikeStory newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<LikeStory>|LikeStory query()
@@ -1533,8 +1587,24 @@ namespace App\Models {
     /**
      * App\Models\Notification
      *
+     * @property int $status
+     * @property bool $is_view
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property string|null $content
+     * @property int|null $actor_id
+     * @property int|null $user_id
+     * @property int $id
      * @property-read \App\Models\User $user
      * @property-read \App\Models\User $actor
+     * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification whereUserId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification whereActorId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification whereContent($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification whereUpdatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification whereIsView($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification whereStatus($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Notification>|Notification query()
@@ -1838,6 +1908,14 @@ namespace App\Models {
     /**
      * App\Models\Post
      *
+     * @property string|null $deleted_at
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property string|null $thumbnail_url
+     * @property int $total_like
+     * @property string|null $caption
+     * @property int|null $user_id
+     * @property int $id
      * @property-read \App\Models\User $user
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Comment> $comments
      * @property-read int|null $comments_count
@@ -1845,6 +1923,14 @@ namespace App\Models {
      * @property-read int|null $likes_count
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Favourite> $favourites
      * @property-read int|null $favourites_count
+     * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post whereUserId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post whereCaption($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post whereTotalLike($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post whereThumbnailUrl($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post whereUpdatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post whereDeletedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post query()
@@ -2148,9 +2234,21 @@ namespace App\Models {
     /**
      * App\Models\Story
      *
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property string|null $expired_time
+     * @property int|null $user_id
+     * @property string|null $video_url
+     * @property int $id
      * @property-read \App\Models\User $user
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\LikeStory> $likes
      * @property-read int|null $likes_count
+     * @method static \Illuminate\Database\Eloquent\Builder<Story>|Story whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Story>|Story whereVideoUrl($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Story>|Story whereUserId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Story>|Story whereExpiredTime($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Story>|Story whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Story>|Story whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Story>|Story newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Story>|Story newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Story>|Story query()
@@ -2454,16 +2552,21 @@ namespace App\Models {
     /**
      * App\Models\User
      *
+     * @property int $login_fail
+     * @property int $status
+     * @property bool $online_status
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
-     * @property string|null $remember_token
-     * @property string|null $address
-     * @property string|null $phone
-     * @property int $role
-     * @property string $password
-     * @property string|null $email_verified_at
-     * @property string $email
-     * @property string $name
+     * @property bool $role
+     * @property string|null $bio
+     * @property string|null $instagram_url
+     * @property string|null $thread_url
+     * @property string|null $facebook_url
+     * @property string|null $password
+     * @property string|null $gmail
+     * @property string|null $avatar_url
+     * @property string|null $full_name
+     * @property string|null $user_name
      * @property int $id
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Post> $posts
      * @property-read int|null $posts_count
@@ -2474,16 +2577,21 @@ namespace App\Models {
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Story> $stories
      * @property-read int|null $stories_count
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereName($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereEmail($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereEmailVerifiedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereUserName($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereFullName($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereAvatarUrl($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereGmail($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User wherePassword($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereFacebookUrl($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereThreadUrl($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereInstagramUrl($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereBio($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereRole($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User wherePhone($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereAddress($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereRememberToken($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereUpdatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereOnlineStatus($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereStatus($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereLoginFail($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User query()
@@ -2787,8 +2895,14 @@ namespace App\Models {
     /**
      * App\Models\ViolenceWarning
      *
+     * @property int|null $infringe_id
+     * @property int|null $user_id
+     * @property int $id
      * @property-read \App\Models\User $user
      * @property-read \App\Models\User $infringe
+     * @method static \Illuminate\Database\Eloquent\Builder<ViolenceWarning>|ViolenceWarning whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<ViolenceWarning>|ViolenceWarning whereUserId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<ViolenceWarning>|ViolenceWarning whereInfringeId($value)
      * @method static \Illuminate\Database\Eloquent\Builder<ViolenceWarning>|ViolenceWarning newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<ViolenceWarning>|ViolenceWarning newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<ViolenceWarning>|ViolenceWarning query()

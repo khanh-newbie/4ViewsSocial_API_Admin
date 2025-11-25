@@ -21,3 +21,4 @@ Route::delete('/stories/{id}', [App\Http\Controllers\StoryController::class, 'de
 Route::get('/comments', [App\Http\Controllers\CommentController::class, 'listComments']);
 Route::delete('/comments/{id}', [App\Http\Controllers\CommentController::class, 'deleteComment']);
 
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'stats']);

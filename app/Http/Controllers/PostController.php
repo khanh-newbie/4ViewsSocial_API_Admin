@@ -24,6 +24,7 @@ class PostController extends Controller
                 'posts.id',
                 'posts.user_id',
                 'users.full_name as user_name',
+                'posts.thumbnail_url',
                 'posts.caption',
                 'posts.total_like',
                 'posts.created_at'

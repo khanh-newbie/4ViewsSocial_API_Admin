@@ -8,9 +8,14 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'stats']);
+Route::get('/dashboard/chart', [App\Http\Controllers\DashboardController::class, 'chart']);
 
 Route::get('/posts', [App\Http\Controllers\PostController::class, 'listPosts']);
 Route::delete('/posts/{id}', [App\Http\Controllers\PostController::class, 'deletePost']);
+
+Route::get('/reports', [App\Http\Controllers\ReportController::class, 'listReports']);
+
 
 Route::get('/users', [App\Http\Controllers\UserController::class, 'listUsers']);
 Route::get('/users/{id}', [App\Http\Controllers\UserController::class, 'getUserById']);
@@ -21,4 +26,3 @@ Route::delete('/stories/{id}', [App\Http\Controllers\StoryController::class, 'de
 Route::get('/comments', [App\Http\Controllers\CommentController::class, 'listComments']);
 Route::delete('/comments/{id}', [App\Http\Controllers\CommentController::class, 'deleteComment']);
 
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'stats']);

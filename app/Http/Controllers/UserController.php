@@ -20,7 +20,7 @@ class UserController extends Controller
             'id',
             'user_name',
             'full_name',
-            'gmail',
+            'email',
             'role',
             'online_status',
             'status'

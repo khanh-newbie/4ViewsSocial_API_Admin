@@ -27,10 +27,11 @@ class PostController extends Controller
                 'posts.thumbnail_url',
                 'posts.caption',
                 'posts.total_like',
+                'posts.total_comment',
                 'posts.created_at'
             )
             ->join('users', 'users.id', '=', 'posts.user_id')
-            ->whereNull('posts.deleted_at'); // chỉ lấy posts chưa xóa
+            ->whereNull('posts.deleted_at');
 
         // Lọc theo user_id (người đăng)
         if ($request->user_id) {
@@ -75,7 +76,7 @@ class PostController extends Controller
             return $this->response->dataNotfound();
         }
 
-        $post->deleted_at = now(); // soft delete
+        $post->deleted_at = now();
         $post->save();
 
         return $this->response->success([], "Đã xóa bài đăng thành công");
